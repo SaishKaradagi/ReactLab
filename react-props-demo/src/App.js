@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import "./App.css";
+import Header from "./Header";
+import Fotter from "./Fottter";
 function App() {
+  const tittle = "Welome to React Props Demo";
+  const tagline = "This is a simple demonstration of passing props in React.";
+  const copyright = "© 2023 React Props Demo";
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header tittle={tittle} />
+      <Fotter tagLine={tagline} copyright={copyright} />
     </div>
   );
 }
